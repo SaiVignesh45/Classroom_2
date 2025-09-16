@@ -1,12 +1,12 @@
-# Project Name: EduConnect (Educational Messaging & Assignments Platform)
+# Project Name: Classroom
 
 ## Overview
 
-Hey everyone! We're super excited to share our new educational project called EduConnect. It's basically a messaging system between teachers and students with some assignment features 
+Hey everyone! We're super excited to share our new educational project called Classroom. It's basically a messaging system between teachers and students with some assignment features 
 thrown in for good measure. So far, we've managed to get the login working and assignments being saved.
 
 We know this is still very much in development mode right now – just enough functionality to show how cool it could be once finished. Our main goal was to create a proof-of-concept 
-that demonstrates what EduConnect could become with proper planning!
+that demonstrates what Classroom could become with proper planning!
 
 ## Current Features
 
