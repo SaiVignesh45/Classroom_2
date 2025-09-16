@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(7, 7, 62);
+            color: rgb(5, 5, 52);
+            margin: 0;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #eee;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #333;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('message_form') }}" method="post">
+        <input type="hidden" name="sender" value="{{ 'username' }}">
+        <label for="recipient">Recipient:</label>
+        <select name="recipient" id="recipient">
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select><br><br>
+        <label for="content">Message:</label><br>
+        <textarea name="content" id="content" rows="5" required></textarea><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Assignments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(8, 8, 56);
+            color:rgb(8, 8, 62);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: rgb(149, 149, 210);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignments</h1>
+    
+    <ul>
+        {% for assignment in assignments %}
+            <li>
+                <h2>{{ assignment.name }}</h2>
+                <p>Description: {{ assignment.description }}</p>
+                <p>Due Date: {{ assignment.due_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

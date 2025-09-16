@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(5, 5, 52);
+            color:rgb(8, 8, 61);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #eee;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li span {
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Messages</h1>
+    <ul>
+        {% for message in messages %}
+            <li><span>{{ message.sender }}</span>: {{ message.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

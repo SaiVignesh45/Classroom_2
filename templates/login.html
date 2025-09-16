@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="cl1.jpg"> -->
+    <!--<link rel="stylesheet" href="signup.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            background-color: rgb(7, 7, 56);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .main{
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+        
+        .navbar{
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+        
+        .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+        .logo{
+            color: cyan;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 5px
+        }
+        
+        .menu{
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+        
+        ul{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        ul li{
+            list-style: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+        
+        ul li a{
+            text-decoration: none;
+            color: rgb(11, 123, 193);
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+        
+        ul li a:hover{
+            color: #fffdfc;
+        }
+        
+        .zero {
+            width: 400px;
+            backdrop-filter: blur(9px);
+            color: cyan;
+            border-radius: 10px;
+            border-width: 2px;
+            padding: 12px;
+            padding-bottom: 30px;
+            margin-top: 60px;
+            margin-left: 35%;
+            background: linear-gradient(to right, cyan, #00FFFF);
+            opacity: 0.8;
+        } 
+        
+        .zero h1 {
+            font-size: 36px;
+            text-align: center;   
+        }
+        
+        .one input {
+            width: 70%;
+            height: 15px;
+            border-bottom: 1px solid cyan;
+            background: skyblue;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin: 10px 0;
+            margin-left: 33px;
+            padding: 20px 40px 20px 20px;
+            color: black;
+        }
+            
+        .one input:focus {
+            outline: none;
+        }
+        
+        .one input::placeholder {
+            color: black;
+            padding: 20px 40px 20px 0;
+            font-family: sans-serif;
+        }
+        
+        .two {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        .zero .btn {
+            margin-right: -50%;
+            width: 85%;
+            height: 40px;
+            font-size: large;
+            border-radius: 10px;
+            background: lightblue; /* Change button color to light blue */
+            font-weight: 450;
+            color: rgb(12, 12, 12);
+            margin-left: 30px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+        
+        .zero .btn:hover {
+            background: lightcyan; /* Change hover color */
+            border-style: none;
+        }
+        
+        .four {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon" style="display: flex;">
+                <h4 class="logo">CLASSROOM</h4>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="link.html">ABOUT</a></li>
+                    <li><a href="#">DEPT</a></li>
+                    <li><a href="#">SUBJECTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="zero">
+            <h1>Sign Up</h1>
+            <div class="one">
+                <form action="{{ url_for('login') }}" method="post">
+                    <input type="text" name="username" placeholder="UserName" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="confirm_password" placeholder="Repeat Password" required>
+                    <a href="#"> <!-- Make sure to close the anchor tag -->
+                        <input type="submit" value="Register" class="btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
